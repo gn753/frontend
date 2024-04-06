@@ -43,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: FrontendApplication
-          path: /home/ubuntu/frontend
+          path: /home/ubuntu/frontend/dist
 
       - name: 배포하기
         run: /home/ubuntu/frontend/deploy.sh
