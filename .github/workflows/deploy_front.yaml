@@ -1,0 +1,70 @@
+name: Frontend CI/CD
+
+on:
+  pull_request:
+    branches: [dev]
+    paths:
+      - 'frontend/**'
+    types: [opened, reopened, closed]
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: ./frontend
+
+jobs:
+  ci:
+    runs-on: ubuntu-22.04
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install node modules
+        run: npm install
+
+      - name: Run Jest test
+        run: npm run test
+
+  cd:
+    runs-on: ubuntu-22.04
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install node modules
+        run: npm install --force
+
+      - name: Build project
+        run: npm run build
+
+      - name: upload to artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: FrontendApplication
+          path: frontend/dist
+
+      - name: delete old js file
+        run: rm -rf /home/ubuntu/frontend/dist
+
+      - name: download js file from artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: FrontendApplication
+          path: /home/ubuntu/frontend
+
+      - name: deploy
+        run: /home/ubuntu/frontend/deploy.sh
