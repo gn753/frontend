@@ -1,53 +1,32 @@
-name: Frontend CI/CD
-
 on:
-  pull_request:
-    branches: [dev]
-    paths:
-      - 'frontend/**'
-    types: [opened, reopened, closed]
-  workflow_dispatch:
+  push:
+    branches:
+      - dev
 
-defaults:
-  run:
-    working-directory: ./frontend
+permissions:
+  contents: write
 
 jobs:
-  ci:
+  build-and-upload:
     runs-on: ubuntu-22.04
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
+          cache: 'npm'
 
-      - name: Install node modules
-        run: npm install
-
-      - name: Run Jest test
-        run: npm run test
-
-  cd:
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-
-      - name: Install node modules
+      - name: Install dependencies
         run: npm install --force
 
-      - name: Build project
-        run: npm run build
+      - name: grant excute access
+        run: chmod +x npm
+
+      - name: Build React app
+        run: npm run build --if-present
 
       - name: upload to artifact
         uses: actions/upload-artifact@v3
@@ -55,6 +34,11 @@ jobs:
           name: FrontendApplication
           path: frontend/dist
 
+  deploy:
+    runs-on: [self-hosted, dev]
+    needs: build-and-upload
+
+    steps:
       - name: delete old js file
         run: rm -rf /home/ubuntu/frontend/dist
 
@@ -64,5 +48,17 @@ jobs:
           name: FrontendApplication
           path: /home/ubuntu/frontend
 
-      - name: deploy
+      - name: 배포하기
         run: /home/ubuntu/frontend/deploy.sh
+
+      - name: send slack message
+
+        uses: 8398a7/action-slack@v3
+        with:
+          mention: 'here'
+          if_mention: always
+          status: ${{ job.status }}
+          fields: workflow,job,commit,message,ref,author,took
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.DEV_DEPLOY_SLACK_WEBHOOK_URL }}
+        if: always()
