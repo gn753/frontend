@@ -36,10 +36,10 @@ jobs:
     needs: build-and-upload
 
     steps:
-      - name: delete old js file
+      - name: 이전 파일 제거
         run: rm -rf /home/ubuntu/frontend/dist
 
-      - name: download js file from artifact
+      - name: 아티팩트로부터 파일 다운로드
         uses: actions/download-artifact@v3
         with:
           name: FrontendApplication
