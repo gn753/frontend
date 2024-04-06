@@ -21,9 +21,9 @@ jobs:
       # Github Repository Secrets를 통해 환경 변수 파일을 생성합니다.
       - name: Generate Environment Variables File for Production
         run: |
-          echo "REACT_APP_DOMAIN=$REACT_APP_DOMAIN" >> .env.production
+          echo "VITE_API_KEY=$VITE_API_KEY" >> .env.production
         env:
-          REACT_APP_DOMAIN: ${{ secrets.VITE_API_KEY }}
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
       - name: Install dependencies
         run: npm install --force
 
