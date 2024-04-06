@@ -1,6 +1,6 @@
 import axios, {AxiosError, AxiosResponse} from 'axios'
 import {fetchRefreshToken} from 'src/store/server/auth/queries'
-
+//수정
 const instance = axios.create({
   baseURL: import.meta.env.VITE_API_KEY,
   headers: {
