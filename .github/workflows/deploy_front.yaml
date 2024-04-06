@@ -46,7 +46,7 @@ jobs:
           path: /home/ubuntu/frontend/dist
 
       - name: 배포하기
-        run: /home/ubuntu/frontend/deploy.sh
+        run: sh /home/ubuntu/frontend/deploy.sh
 
       - name: send slack message
 
