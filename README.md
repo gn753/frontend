@@ -7,7 +7,7 @@
 - 사용자들은 인스타그램과 같이 글, 사진, 영상을 통해 향수에 대한 감상과 무드를 표현할 수 있으며, 팔로우 및 팔로잉 기능을 통해 타임라인에서 실시간 리뷰를 확인할 수 있습니다.
 
 ### 실행 방법
-<a href="https://perfume.app.cd80.run/">배포링크</a> 
+<a href="http://ec2-43-203-196-14.ap-northeast-2.compute.amazonaws.com/">배포링크</a> 
 아이디 및 패스워드 : admin
 ```
 npm install 설치
