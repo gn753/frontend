@@ -69,10 +69,6 @@
   <img src="https://github.com/user-attachments/assets/071d943c-029f-42be-9bcd-6818ce2aba7c" alt="스토리북" width="500">
 </p>
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/071d943c-029f-42be-9bcd-6818ce2aba7c" alt="스토리북" width="500">
-</p>
-
 
 ## 팀 프로젝트 저장소 링크 
 <a href="https://github.com/read-a-perfume/frontend">링크</a>  
