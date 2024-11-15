@@ -1,5 +1,3 @@
-
-
 ## Perfume Community - Read- A Perfume
 
 ### 프로젝트 소개
@@ -10,6 +8,8 @@
 
 <p align="center">
   <img src="https://github.com/read-a-perfume/frontend/assets/71584114/f56a95ad-6095-45c1-a631-e20366554f66" width="500px" height="300px"/>  
+  <br>
+  <em>Perfume Community 메인 화면</em>
 </p>
 
 ### 개발 환경
@@ -31,6 +31,8 @@
 
 <p align="center">
   <img src="https://github.com/gn753/frontend/assets/71584114/b3833877-8c54-4d15-9c07-ae3104e14037" alt="향수 리뷰 작성" width="500">
+  <br>
+  <em>사용자가 향수 리뷰를 작성하는 화면</em>
 </p>
 
 **2. 향수 리뷰 보기**  
@@ -39,6 +41,8 @@
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/360f1e8d-fa02-4a48-9cbe-e28d747c30f0" alt="향수 리뷰 보기" width="500">
+  <br>
+  <em>다른 사용자가 작성한 리뷰 보기 화면</em>
 </p>
 
 **3. 회원가입**  
@@ -49,6 +53,8 @@
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4581dbc3-9c8b-422a-a592-b6ef9801c259" alt="회원가입" width="500">
+  <br>
+  <em>회원가입 페이지</em>
 </p>
 
 **4. 로그인**  
@@ -57,6 +63,8 @@
 
 <p align="center">
   <img src="https://github.com/gn753/frontend/assets/71584114/f16476a3-9ef7-48f5-9c7a-bb65f8ccf75b" alt="로그인" width="500">
+  <br>
+  <em>로그인 페이지</em>
 </p>
 
 **5. 공통 컴포넌트 및 스토리북을 통한 UI 문서화**  
@@ -67,13 +75,11 @@
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/071d943c-029f-42be-9bcd-6818ce2aba7c" alt="스토리북" width="500">
+  <br>
+  <em>UI 문서화를 위한 스토리북</em>
 </p>
 
 
 ## 팀 프로젝트 저장소 링크 
 <a href="https://github.com/read-a-perfume/frontend">링크</a>  
-이 저장소는 리드미를 개인화하기 위해 Pork한 저장소입니다. 팀 저장소를 확인하고 싶다면 다음 링크를 눌러주세요
-
-
-
-
+이 저장소는 리드미를 개인화하기 위해 포크한 저장소입니다. 팀 저장소를 확인하고 싶다면 다음 링크를 눌러주세요
