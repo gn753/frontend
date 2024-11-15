@@ -1,12 +1,78 @@
-<img src="https://github.com/read-a-perfume/frontend/assets/71584114/f56a95ad-6095-45c1-a631-e20366554f66" width="500px" height="300px"/>  
 
-## 공지   
 
-DB 서버가 종료되어 2024년 4월 15일 현재는 배포는 중단된 상황입니다. 
+## Perfume Community - Read- A Perfume
 
-## 프로젝트 소개
+### 프로젝트 소개
 
-- 유저에게 다양한 향수에 대한 정보를 제공하는 커뮤니티 플랫폼입니다. 일반 회원은 간편하게 가입하여 다양한 향수에 대한 정보를 탐색하고, 좋아요, 팔로우, 리뷰 작성 등 커뮤니티 활동이 가능합니다.
+-  향수 애호가들을 위한 온라인 커뮤니티 플랫폼입니다. 사용자들이 다양한 향수에 대한 리뷰를 작성하고, 향기 노트와 성분 정보를 교환하며,
+-  서로의 향수 취향을 공유할 수 있도록 설계되었습니다.
+-  또한, 추천 알고리즘을 통해 사용자가 선호할 만한 향수를 제안하고, 유사한 향기를 찾을 수 있는 기능을 제공합니다.
+
+<p align="center">
+  <img src="https://github.com/read-a-perfume/frontend/assets/71584114/f56a95ad-6095-45c1-a631-e20366554f66" width="500px" height="300px"/>  
+</p>
+
+### 개발 환경
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=mui&logoColor=white" alt="Material-UI"/>
+  <img src="https://img.shields.io/badge/React--Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white" alt="React-Query"/>
+</p>
+
+
+### 제가 담당한 핵심 개발 기능 (Features)
+
+**1. 향수 리뷰 작성**  
+
+- 사용자가 직접 리뷰를 작성하고 다른 유저가 작성한 리뷰를 검색할 수 있는 기능 제공  
+
+<p align="center">
+  <img src="https://github.com/gn753/frontend/assets/71584114/b3833877-8c54-4d15-9c07-ae3104e14037" alt="향수 리뷰 작성" width="500">
+</p>
+
+**2. 향수 리뷰 보기**  
+
+- 다른 사용자가 작성한 리뷰를 한눈에 확인할 수 있는 인터페이스 제공
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/360f1e8d-fa02-4a48-9cbe-e28d747c30f0" alt="향수 리뷰 보기" width="500">
+</p>
+
+**3. 회원가입**  
+
+- 아이디 중복 확인, 이메일 인증, 인증 코드 확인 절차를 통한 안전한 가입 절차 구현
+- 실시간 폼 유효성 검사를 통해 잘못된 입력 차단
+- 각 인증 단계에서 오류 없이 안정적인 사용자 경험 제공  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4581dbc3-9c8b-422a-a592-b6ef9801c259" alt="회원가입" width="500">
+</p>
+
+**4. 로그인**  
+
+- 사용자가 쉽게 로그인할 수 있는 페이지 제공
+
+<p align="center">
+  <img src="https://github.com/gn753/frontend/assets/71584114/f16476a3-9ef7-48f5-9c7a-bb65f8ccf75b" alt="로그인" width="500">
+</p>
+
+**5. 공통 컴포넌트 및 스토리북을 통한 UI 문서화**  
+
+- 스토리북을 활용하여 독립적인 UI 컴포넌트 개발 및 테스트
+- 컴포넌트의 다양한 상태와 조합을 시각적으로 확인하여 의존성을 최소화
+- 자동 생성된 문서를 통해 팀원 간 효율적인 소통과 협업 지원  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/071d943c-029f-42be-9bcd-6818ce2aba7c" alt="스토리북" width="500">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/071d943c-029f-42be-9bcd-6818ce2aba7c" alt="스토리북" width="500">
+</p>
+
 
 ## 팀 프로젝트 저장소 링크 
 <a href="https://github.com/read-a-perfume/frontend">링크</a>  
@@ -15,89 +81,3 @@ DB 서버가 종료되어 2024년 4월 15일 현재는 배포는 중단된 상�
 
 
 
-## 저의 프로젝트의 주요 관심사
-#### 공통사항  
-
-- 지속적인 성능 개선
-- 나쁜 냄새가 나는 코드에 대한 리팩토링
-- 디자인 시스템 구축 
-
-#### 코드 컨벤션  
-- 팀 내 규칙으로 정한 code Style을 준수
-- PR 리뷰를 통해 코드 컨벤션을 유지
-
-#### 성능 최적화  
-- 번들링 사이즈 최적화
-- 이미지 최적화
-- 웹 폰트 최적화
-
-
-### 1. 컴포넌트 디자인 시스템(스토리북)
-<a href="https://65b77008a475f07078b8424e-xaguxgxkvb.chromatic.com/">스토리북 배포 링크</a>   
-
-스토리북은 UI 컴포넌트를 독립적으로 개발하고 테스트하며 문서화할 수 있는 도구입니다.  
-
-본 프로젝트에서는 스토리북을 사용해 각 UI 컴포넌트를 개별적으로 개발하고 테스트했습니다.  
-이를 통해 컴포넌트 간의 의존성을 최소화하고, 다양한 상태와 조합을 시각적으로 확인했으며   
-또한, 스토리북을 통해 자동 생성된 문서를 사용하여 팀원 간의 효율적인 소통과 협업을 활발히 진행했습니다.  
-
-
-###  2. Git Flow 브랜치 관리 전략
-
-브랜치 관리 전략
-Git Flow를 사용하여 브랜치를 관리했습니다.  
-모든 브랜치는 Pull Request에 리뷰를 진행한 후 merge를 진행하였습니다  
-- main: 배포 준비 완료된 브랜치로, 직접 커밋 금지. 리뷰 후에만 병합.
-- develop: 최신 개발 업데이트를 포함.
-- feature/*: 새로운 기능 개발 브랜치. 완료 후 develop에 병합.
-
-
-### 제가 담당한 기능
-
-- 회원가입 및 리뷰 폼 개발 및 유효성 검사.
-- Github action을 통한 CI/CD 담당
-- 로그인 / 로그인 유지 기능 개발
-- 초기 개발 환경 구축 및 디자인 시스템 구축
-- 스토리북 통한 UI 테스트 코드를 작성 해 UI 검증 자동화
-- 번들 사이즈 최적화
-- 이미지, 웹 폰트 최적화
-- React-Query 중복 패칭 개선
--  팀 코드 컨벤션 정립, 트러블 슈팅 문서화
-
-### 제가 구현한 기능 주요 화면
-
-#### 리뷰 작성
-
-![0617162226848442](https://github.com/gn753/frontend/assets/71584114/b3833877-8c54-4d15-9c07-ae3104e14037)
-
-#### 회원가입
-
-
-![0617162525230732](https://github.com/gn753/frontend/assets/71584114/22d599ee-62ed-4a95-84f6-67e5660531bf)
-
-#### 로그인
-
-![스크린샷 2024-06-17 162809](https://github.com/gn753/frontend/assets/71584114/f16476a3-9ef7-48f5-9c7a-bb65f8ccf75b)
-
-#### 리뷰 목록 
-
-![스크린샷 2024-06-17 163045](https://github.com/gn753/frontend/assets/71584114/3ff22e04-d1ed-441f-b301-c189d12aaff3)
-
-
-
-### 사용 기술 및 환경
-
-React,Typescript,Vite,Material-ui,React-Query
-
-## Commit Convention
-
-| commit type | commit message                            |
-| ----------- | ----------------------------------------- |
-| feat        | 기능 개발                                 |
-| fix         | 버그 수정                                 |
-| style       | 불필요한 코드 제거 등                     |
-| design      | 디자인 관련 코드                          |
-| chore       | 빌드 수정, 패키지 매니저 등 기타 변경사항 |
-| move        | 파일이나 폴더 위치 변경                   |
-| remove      | 파일이나 폴더 제거                        |
-| refactor    | 코드 리팩토링                             |
